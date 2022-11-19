@@ -18,6 +18,7 @@ charts/*/values.yaml
 .DS_Store
 .bsp
 /project/metals.sbt
+/project/.bloop
 /project/*
 /.metals
 /.bloop
