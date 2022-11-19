@@ -23,3 +23,4 @@ charts/*/values.yaml
 /.metals
 /.bloop
 /.vscode
+/temp
