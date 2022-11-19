@@ -2,7 +2,11 @@ package com.consolebuilder.domain
 
 import eu.timepit.refined.types.string.NonEmptyString
 
-opaque type TextMessage = String
+trait InteractiveMessage
 
-object TextMessage:
-    def apply(input: NonEmptyString): TextMessage = input.value
+case class TextMessage(s: NonEmptyString) extends InteractiveMessage
+
+object InteractiveMessage:
+    extension (str: String) {
+        def toTextMessageUnsafe = TextMessage(NonEmptyString.unsafeFrom(str))
+    }
